@@ -11,7 +11,90 @@ body {
   padding: 0;
   font-size: 16px;
 }
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #2a5298;
+  border-radius: 5px;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
 /* Flex and Grid Utilities */
 .flex {
   display: flex;
