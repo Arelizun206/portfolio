@@ -1,86 +1,82 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { BadgeCheck, Mail, Linkedin, Github } from "lucide-react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Name] – Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    .font-serif {
+      font-family: 'Georgia', serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#fdfaf6] to-[#e7e4dc] text-[#2f2f2f]">
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 p-8 text-gray-800">
-      <header className="text-center py-10">
-        <motion.h1
-          className="text-5xl font-bold"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Hi, I'm [Your Name]
-        </motion.h1>
-        <p className="text-xl mt-4 text-gray-600">
-          Frontend Developer • Designer • Storyteller
-        </p>
-        <div className="flex justify-center gap-4 mt-6">
-          <Button variant="outline">
-            <Mail className="mr-2 h-4 w-4" /> Contact
-          </Button>
-          <Button variant="outline">
-            <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-          </Button>
-          <Button variant="outline">
-            <Github className="mr-2 h-4 w-4" /> GitHub
-          </Button>
-        </div>
-      </header>
-
-      <section className="grid md:grid-cols-3 gap-6 mt-16">
-        <Card className="rounded-2xl shadow-md">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-2">About Me</h2>
-            <p>
-              I'm a creative developer passionate about crafting beautiful and functional web experiences. From sleek interfaces to performance-optimized code, I blend design with logic to build meaningful digital stories.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="rounded-2xl shadow-md col-span-2">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Projects</h2>
-            <ul className="space-y-4">
-              <li>
-                <BadgeCheck className="inline mr-2 text-green-500" />
-                <strong>Serene Wellness Retreat</strong> – Full-stack site for a retreat business inspired by nature and peace.
-              </li>
-              <li>
-                <BadgeCheck className="inline mr-2 text-green-500" />
-                <strong>Vogue-Inspired Showcase</strong> – Styled content hub with dynamic layouts, animations, and storytelling vibes.
-              </li>
-              <li>
-                <BadgeCheck className="inline mr-2 text-green-500" />
-                <strong>Ball So High Tennis Club</strong> – Branded microsite with elegant visuals and custom animations.
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card className="rounded-2xl shadow-md col-span-3">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Skills & Tools</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <span className="bg-gray-200 py-1 px-3 rounded-full">React</span>
-              <span className="bg-gray-200 py-1 px-3 rounded-full">Tailwind CSS</span>
-              <span className="bg-gray-200 py-1 px-3 rounded-full">Framer Motion</span>
-              <span className="bg-gray-200 py-1 px-3 rounded-full">Figma</span>
-              <span className="bg-gray-200 py-1 px-3 rounded-full">Next.js</span>
-              <span className="bg-gray-200 py-1 px-3 rounded-full">TypeScript</span>
-              <span className="bg-gray-200 py-1 px-3 rounded-full">Vercel</span>
-              <span className="bg-gray-200 py-1 px-3 rounded-full">Git</span>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
-      <footer className="text-center mt-20 text-sm text-gray-500">
-        © 2025 [Your Name] • Designed with passion ✨
-      </footer>
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-6xl font-serif font-bold text-[#1f1f1f] mb-6">[Your Name]</h1>
+    <p class="text-xl text-[#5a5a5a] max-w-xl mb-8">
+      Digital creative focused on design-driven development, storytelling interfaces, and beautiful user experiences.
+    </p>
+    <div class="flex gap-4">
+      <a href="mailto:your@email.com" class="border border-[#2f2f2f] rounded-full px-4 py-2 text-sm hover:bg-[#2f2f2f] hover:text-white transition">📧 Email Me</a>
+      <a href="#" class="border border-[#2f2f2f] rounded-full px-4 py-2 text-sm hover:bg-[#2f2f2f] hover:text-white transition">🔗 LinkedIn</a>
+      <a href="#" class="border border-[#2f2f2f] rounded-full px-4 py-2 text-sm hover:bg-[#2f2f2f] hover:text-white transition">💻 GitHub</a>
     </div>
-  );
-}
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="px-8 py-20 grid md:grid-cols-3 gap-10 bg-white rounded-t-[3rem] shadow-2xl -mt-20">
+    <div>
+      <h2 class="text-2xl font-serif font-semibold mb-4">About</h2>
+      <p class="text-[#444] leading-relaxed">
+        I'm a design-oriented developer with a passion for visually compelling, functional web experiences.
+        My approach is equal parts aesthetic and performance.
+      </p>
+    </div>
+    <div class="md:col-span-2 grid gap-6">
+      <div class="bg-[#f8f6f2] p-6 rounded-2xl shadow-sm">
+        <h3 class="text-lg font-medium">🌿 Serene Wellness Retreat</h3>
+        <p class="text-sm text-[#666] mt-2">
+          A calming brand site crafted with nature-inspired themes, smooth transitions, and a story-first layout.
+        </p>
+      </div>
+      <div class="bg-[#f8f6f2] p-6 rounded-2xl shadow-sm">
+        <h3 class="text-lg font-medium">👜 Vogue-Inspired Editorial Hub</h3>
+        <p class="text-sm text-[#666] mt-2">
+          Designed an editorial-style project page, highlighting beauty, layout play, and image-forward storytelling.
+        </p>
+      </div>
+      <div class="bg-[#f8f6f2] p-6 rounded-2xl shadow-sm">
+        <h3 class="text-lg font-medium">🎾 Ball So High Tennis Club</h3>
+        <p class="text-sm text-[#666] mt-2">
+          A lifestyle sports landing page featuring minimalist UI, motion design, and clean visual rhythm.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="px-8 py-20 bg-[#eae7df]">
+    <h2 class="text-2xl font-serif font-semibold text-center mb-10">Skills & Tools</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">React</span>
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">Next.js</span>
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">Tailwind</span>
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">Figma</span>
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">Framer Motion</span>
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">TypeScript</span>
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">Vercel</span>
+      <span class="bg-white border border-[#ccc] px-4 py-2 rounded-full text-sm shadow-sm">Storybook</span>
+    </div>
+  </section>
+
+  <footer class="text-center text-xs text-[#888] py-8">
+    Designed with purpose • © 2025 [Your Name]
+  </footer>
+</body>
+</html>
