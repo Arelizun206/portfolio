@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 
+/* Body and font setup */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   background: linear-gradient(to bottom, #fdfaf6, #e7e4dc);
   color: #2f2f2f;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 /* Color Palette */
@@ -21,13 +24,6 @@ body {
 }
 
 /* Global Styles */
-body {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-gray);
-}
-
-/* Header */
 h1, h2, h3 {
   font-family: 'Georgia', serif;
 }
@@ -209,5 +205,25 @@ footer a:hover {
 
   .cta-buttons {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .cta-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
   }
 }
