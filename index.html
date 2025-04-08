@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Areli Zuniga – Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide-react/dist/index.min.js"></script> <!-- For the icons -->
+  <script src="https://unpkg.com/framer-motion"></script> <!-- For the animations -->
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -18,7 +20,20 @@
 
   <!-- HERO -->
   <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-    <h1 class="text-6xl font-serif font-bold text-[#1f1f1f] mb-6"> Areli Zuniga </h1>
+    <script>
+      const { motion } = window["framer-motion"]; // Import motion library
+
+      const motionProps = {
+        initial: { opacity: 0, y: -40 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 1 },
+      };
+    </script>
+    <motion.h1
+      class="text-6xl font-serif font-bold text-[#1f1f1f] mb-6"
+      {...motionProps}>
+      Areli Zuniga
+    </motion.h1>
     <p class="text-xl text-[#5a5a5a] max-w-xl mb-8">
       Digital creative focused on design-driven development, storytelling interfaces, and beautiful user experiences.
     </p>
@@ -34,26 +49,26 @@
     <div>
       <h2 class="text-2xl font-serif font-semibold mb-4">About</h2>
       <p class="text-[#444] leading-relaxed">
-        Text
+        I'm a design-oriented developer with a passion for visually compelling, functional web experiences. My approach is equal parts aesthetic and performance.
       </p>
     </div>
     <div class="md:col-span-2 grid gap-6">
       <div class="bg-[#f8f6f2] p-6 rounded-2xl shadow-sm">
-        <h3 class="text-lg font-medium">Activity</h3>
+        <h3 class="text-lg font-medium">🌿 Serene Wellness Retreat</h3>
         <p class="text-sm text-[#666] mt-2">
-         Text
+          A calming brand site crafted with nature-inspired themes, smooth transitions, and a story-first layout.
         </p>
       </div>
       <div class="bg-[#f8f6f2] p-6 rounded-2xl shadow-sm">
-        <h3 class="text-lg font-medium">Activity</h3>
+        <h3 class="text-lg font-medium">👜 Vogue-Inspired Editorial Hub</h3>
         <p class="text-sm text-[#666] mt-2">
-         Text
+          Designed an editorial-style project page, highlighting beauty, layout play, and image-forward storytelling.
         </p>
       </div>
       <div class="bg-[#f8f6f2] p-6 rounded-2xl shadow-sm">
-        <h3 class="text-lg font-medium">Activity</h3>
+        <h3 class="text-lg font-medium">🎾 Ball So High Tennis Club</h3>
         <p class="text-sm text-[#666] mt-2">
-         Text.
+          A lifestyle sports landing page featuring minimalist UI, motion design, and clean visual rhythm.
         </p>
       </div>
     </div>
@@ -74,8 +89,55 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section class="px-8 py-20 bg-[#fdfaf6]">
+    <h2 class="text-2xl font-serif font-semibold text-center mb-10">Experience & Leadership</h2>
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">🎓 Education</h3>
+        <ul class="list-disc list-inside text-sm text-[#444] space-y-1">
+          <li><strong>Vanderbilt University</strong>, B.S. in HOD, MHS, Business Minor – <em>Expected May 2026</em></li>
+          <li><strong>Westfield High School</strong> – <em>Graduated May 2022</em></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">💼 Work & Research Experience</h3>
+        <ul class="list-disc list-inside text-sm text-[#444] space-y-1">
+          <li><strong>Digital Engagement Intern</strong> – East London Waterworks Park (Jan 2025 – Present)</li>
+          <li><strong>Office Assistant</strong> – VU CompSci Dept (Sept 2024 – Jan 2025)</li>
+          <li><strong>Research Assistant</strong> – LLD-CLED Lab (Oct 2023 – Jan 2024)</li>
+          <li><strong>Participant</strong> – FinTech Focus Program (July 2022)</li>
+          <li><strong>Library Assistant (Volunteer)</strong> – Houston Public Library (2021–2022)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">🌟 Leadership & Campus Involvement</h3>
+        <ul class="list-disc list-inside text-sm text-[#444] space-y-1">
+          <li>Vanderbilt Hustler – Staff Writer</li>
+          <li>Relay for Life – Activities Committee</li>
+          <li>Business & Medicine – PR Chair</li>
+          <li>Center for Latin American Studies – Student Board Member</li>
+          <li>Peabody Latin American Student Association – Social Media Chair</li>
+          <li>National Patient Advocate Chapter – Volunteer</li>
+          <li>Alternative Spring Break – Volunteer (Austin, TX)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">🛠️ Additional Skills</h3>
+        <ul class="list-disc list-inside text-sm text-[#444] space-y-1">
+          <li><strong>Languages:</strong> Fluent in English & Spanish</li>
+          <li><strong>Tech:</strong> Microsoft Office, Google Suite, RedCap</li>
+          <li><strong>Coding:</strong> HTML, CSS, JavaScript</li>
+          <li><strong>Hobbies:</strong> Baking, Reading, Swimming, Badminton</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="text-center text-xs text-[#888] py-8">
-    Designed with purpose • © 2025 [Your Name]
+    Designed with purpose • © 2025 Areli Zuniga
   </footer>
+
 </body>
 </html>
