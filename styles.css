@@ -11,6 +11,7 @@ body {
   padding: 0;
   font-size: 16px;
 }
+
 /* Navbar Styles */
 .navbar {
   position: fixed;
@@ -21,7 +22,7 @@ body {
   color: white;
   padding: 10px 20px;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-container {
@@ -33,45 +34,55 @@ body {
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #2a5298;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .navbar-link {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
-  padding: 5px 10px;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-link:hover {
-  background-color: #2a5298;
-  border-radius: 5px;
+  color: #2a5298;
+  transform: translateY(-3px);
 }
 
-.navbar-toggle {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
+.navbar-links > li {
+  position: relative;
 }
 
-.bar {
-  width: 30px;
+/* Hover Animation Effect */
+.navbar-links > li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
   height: 3px;
-  background-color: white;
-  transition: all 0.3s ease;
+  background-color: #2a5298;
+  transition: width 0.3s ease;
 }
 
+.navbar-links > li:hover::after {
+  width: 100%;
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar-links {
